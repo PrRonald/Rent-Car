@@ -4,9 +4,12 @@ export const Menu = () => {
     return (
         <section className="w-full 
                 flex justify-center ">
-            <section className=' md:bg-red-800  bg-yellow-500
-                    text-[38px] text-center w-[90%] rounded-[35px] m-4 '>
-                <Link to="/" >Home</Link>
+            <section className=' bg-blue-200
+                    text-[1.5rem] text-center w-full 
+                     p-2 grid grid-cols-3 divide-x'>
+                <Link className=" hover:text-blue-700 " to="/" >Info</Link>
+                <Link className=" hover:text-blue-700 " to="/" >Home</Link>
+                <Link className=" hover:text-blue-700 " to="/" >Contact</Link>
             </section>
         </section>
     );
