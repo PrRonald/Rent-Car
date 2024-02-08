@@ -1,9 +1,20 @@
 import './App.css';
+import { Footer } from './root/Footer';
+import { Header } from "./root/Header";
+import {Outlet} from "react-router-dom"
+
+
 
 function App() {
   return (
-    <p className='md:bg-black md:text-[15px] bg-yellow-500
-     text-[38px]  '>Hola</p>
+    <>
+      <Header />
+      <div className='datil' >
+          <Outlet />
+      </div>
+      <Footer />
+    </>
+
   )
 }
 
