@@ -1,9 +1,28 @@
-export const Body = () =>{
-    return(
-        <section className="w-full flex justify-center" >
-            <div className=" w-[90%] h-[500px] border-2 border-black " >
-                <h1>Body</h1>
+import { InfoCar } from "../component/InfoCar";
+import { PickDropInfo } from "../component/PickDropInfo";
+
+export const Body = () => {
+    return (
+        <section >
+            <div className="w-full flex flex-col items-center" >
+
+                <div className=" w-[90%] h-[auto]  " >
+
+                    <div>
+                        <PickDropInfo title={"Pick-Up"} />
+                    </div>
+
+                    <div>
+                        <PickDropInfo title={"Drop-Off"} />
+                    </div>
+
+                </div>
+                <div className="w-[90%]">
+                    <InfoCar />
+                </div>
+
             </div>
+
         </section>
     );
 }

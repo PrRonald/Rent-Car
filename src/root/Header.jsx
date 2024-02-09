@@ -28,7 +28,7 @@ export const Header = () => {
                                 <PiMagnifyingGlassThin className=" size-[24px] text-[#C3D4E9]  " />
                             </div>
                             <input className=" w-full rounded-[10px] border-[1px] outline-none border-none" 
-                            name="hola" placeholder="Search something here"/>
+                            name="hola" placeholder="Search something"/>
                         </div>
                         <div className="rounded-[10px] border-[1px] 
                      border-[#C3D4E9] border-s w-auto">
