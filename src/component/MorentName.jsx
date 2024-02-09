@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 export const MorentName = () => {
     return(
-        <h1 className="text-2xl font-bold text-blue-500 h-auto ">MORENT</h1>
+        <Link to={"/"} className="text-2xl font-bold text-blue-500 h-auto ">MORENT</Link>
     );
 }

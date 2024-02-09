@@ -61,7 +61,7 @@ export const InfoCar = () => {
                                 <h2 className="font-medium text-[12px] text-[#90A3BF] " >${elem.beforePrice}</h2>
                             </div>
                             <div className=" justify-self-end " > 
-                                <RentNow />
+                                <RentNow  id={elem.id}/>
                             </div>
                         </div>
                     </div>

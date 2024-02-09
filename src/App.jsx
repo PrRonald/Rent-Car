@@ -13,12 +13,13 @@ function App() {
       </div>
       <Footer />
     </>
-
   )
 }
 
-export function getImageById(name, arr) {
-  return arr.find((elem) => elem.name === name);
-}
+export const getCarById = (id, arr) => {
+  return(
+    arr.find((elem) => elem.id === id)
+  )
+};
 
 export default App;
