@@ -8,7 +8,7 @@ export const ErrorPage = () => {
 
     return (
         <div className=" w-full h-[100vh] flex flex-col
-         justify-center items-center " style={{backgroundImage:`url("/construction.svg")`}}
+         justify-center items-center " style={{backgroundImage:`url("/svg/construction.svg")`}}
         id="error-page">
             
             <div className="size-[50%] border-2 border-red-700 rounded-md " >
