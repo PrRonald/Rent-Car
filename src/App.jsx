@@ -1,6 +1,6 @@
 import './App.css';
-import { Footer } from './root/Footer';
-import { Header } from "./root/Header";
+import { Footer } from './component/Footer';
+import { Header } from "./component/Header";
 import {Outlet} from "react-router-dom"
 
 

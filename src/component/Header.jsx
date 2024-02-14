@@ -1,10 +1,14 @@
 import { IoIosMenu } from "react-icons/io";
 import { FaRegUserCircle } from "react-icons/fa";
 import { PiMagnifyingGlassThin } from "react-icons/pi";
-import { MorentName } from "../component/MorentName";
-// import { Filter } from "./svg/Filter";
+import { MorentName } from "./MorentName";
+
+
+
 
 export const Header = () => {
+
+
 
     return (
         <section className="flex flex-row justify-center w-full h-[222px] " >
@@ -32,7 +36,7 @@ export const Header = () => {
                         </div>
                         <div className="rounded-[10px] border-[1px] 
                      border-[#C3D4E9] border-s w-auto flex justify-center items-center ">
-                           <img className="size-[24px]" src="./svg/Filter.svg" alt="filter" />
+                           <img className="size-[24px]" src="../svg/Filter.svg" alt="filter" />
                         </div>
                     </div>
 

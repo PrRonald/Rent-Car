@@ -3,6 +3,7 @@ import { GoPeople } from "react-icons/go";
 import { TbSteeringWheel } from "react-icons/tb";
 import { FaHeart } from "react-icons/fa";
 import { RentNow } from "./RentNow";
+import { Prices } from "./Prices";
 
 export const cars = [
     { id: 1, name: "All New Rush", fuel: "90L", model: "SUV", engine: "Manual", seat: 6, price: "90.00", beforePrice: "110.00", img: "./img/All-New-Rush.png" },
@@ -20,7 +21,7 @@ export const InfoCar = () => {
         <section className=" w-full flex flex-col items-center   ">
             {
                 cars.map(elem => (
-                    <div className=" w-[91.38%]  ">
+                    <div className=" w-[91.38%]  " key={elem.id} >
                         <div className="grid grid-cols-2 gap-4" >
                             <div>
                                 <h1 className="font-semibold text-[16px] text-[#1A202C] " >{elem.name}</h1>
@@ -37,6 +38,7 @@ export const InfoCar = () => {
                             <div className=" justify-self-center " >
                                 <div className="flex flex-col justify-center" >
                                     <table>
+                                        <tbody>
                                         <tr>
                                             <td className="text-[12px] text-[#90A3BF] font-medium " ><FaGasPump /></td>
                                             <td className="text-[12px] text-[#90A3BF] font-medium " >{elem.fuel}</td>
@@ -49,19 +51,17 @@ export const InfoCar = () => {
                                             <td className="text-[12px] text-[#90A3BF] font-medium " ><TbSteeringWheel /></td>
                                             <td className="text-[12px] text-[#90A3BF] font-medium " >{elem.engine}</td>
                                         </tr>
+                                        </tbody>
                                     </table>
+
                                 </div>
 
                             </div>
                         </div>
                         <div className=" grid grid-cols-2 mt-2 " >
-                            <div>
-                                <h1 className=" text-[16px] font-semibold text-[#1A202C] " >${elem.price}/
-                                <span className="font-medium text-[12px] text-[#90A3BF] " >day</span></h1>
-                                <h2 className="font-medium text-[12px] text-[#90A3BF] " >${elem.beforePrice}</h2>
-                            </div>
+                            <Prices price={elem.price} beforePrice={elem.beforePrice} />
                             <div className=" justify-self-end " > 
-                                <RentNow  id={elem.id}/>
+                                <RentNow  url={`detail/${elem.id}`}/>
                             </div>
                         </div>
                     </div>

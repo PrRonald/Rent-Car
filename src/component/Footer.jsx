@@ -1,4 +1,4 @@
-import { MorentName } from "../component/MorentName";
+import { MorentName } from "./MorentName";
 
 
 export const Footer = () => {
