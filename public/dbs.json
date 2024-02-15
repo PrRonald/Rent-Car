@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "name": "All New Rush",
+        "fuel": "90L",
+        "model": "SUV",
+        "engine": "Manual",
+        "seat": 6,
+        "price": "90.00",
+        "beforePrice": "110.00",
+        "img": "./img/All-New-Rush.png"
+    },
+    {
+        "id": 2,
+        "name": "All New Terios",
+        "fuel": "80L",
+        "model": "SUV",
+        "engine": "Auto",
+        "seat": 4,
+        "price": "70.00",
+        "beforePrice": "90.00",
+        "img": "./img/All-New-Terios.png"
+    },
+    {
+        "id": 3,
+        "name": "CR-V",
+        "model": "SUV",
+        "fuel": "100L",
+        "engine": "Manual",
+        "seat": 6,
+        "price": "135.00",
+        "beforePrice": "150.00",
+        "img": "./img/CR-V.png"
+    },
+    {
+        "id": 4,
+        "name": "Kownigsegg",
+        "model": "SUV",
+        "fuel": "110L",
+        "engine": "Manual",
+        "seat": 6,
+        "price": "80.00",
+        "beforePrice": "0",
+        "img": "./img/Kownigsegg.png"
+    },
+    {
+        "id": 5,
+        "name": "New MGZS",
+        "model": "SUV",
+        "fuel": "90L",
+        "engine": "Auto",
+        "seat": 4,
+        "price": "100.00",
+        "beforePrice": "0",
+        "img": "./img/New-MGZS.png"
+    }
+]

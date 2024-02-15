@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom"
 import { cars } from "../component/InfoCar"
 import { getCarById } from "../App"
 import { RentNow } from "../component/RentNow"
+import { Prices } from "../component/Prices"
+import { CiStar } from "react-icons/ci";
 
 
 export const DetailCars = () => {
@@ -22,22 +24,56 @@ export const DetailCars = () => {
                                 <div className="w-full h-[64px] bg-blue-400 " ></div>
                             </div>
                         </div>
-
                     </div>
 
 
 
-                </div>
+                    <div className=" grid grid-rows-[46px_72px_48px_56px] gap-y-[16px] " >
+                        <div>
+                            <h1 className=" w-[174px] h-[24px] font-bold text-[20px] " > {obj.name} </h1>
+                            
+                            <div className=" flex flex-row justify-start pt-2 ">
+                            <CiStar />
+                            <CiStar />
+                            <CiStar />
+                            <CiStar />
+                            <CiStar />
+                            <span className=" font-medium text-[12px] leading-[15.12px]
+                            text-[#90A3BF] pl-2 " >440+ Reviewer</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p className="w-[295px] h-[72px] font-normal text-[12px] leading-6 text-[#90A3BF] " >
+                                NISMO has become the embodiment of Nissan's outstanding
+                                performance, inspired by the most unforgiving proving
+                                ground, the "race track".
+                            </p>
+                            </div>
+                            <div>
+                            <table>
+                                <tr>
+                                    <td>Type Car</td>
+                                    <td>Sport</td>
+                                    <td>Capacity</td>
+                                    <td>{obj.seat}</td>
+                                </tr>
+                                <tr>
+                                    <td>Steering</td>
+                                    <td>{obj.engine}</td>
+                                    <td>Gas</td>
+                                    <td>{obj.fuel}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div className="flex flex-row justify-between " >
+                            <Prices price={obj.price} beforePrice={obj.beforePrice} />
+                            <RentNow url={"/paymentCarRent"} />
 
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div>
-                    <RentNow url={"/paymentCarRent"} />
-
+                        </div>
                     </div>
-                </div>
 
+
+                </div>
 
 
             </section>
@@ -45,32 +81,3 @@ export const DetailCars = () => {
         </>
     );
 }
-
-
-// <div className="w-full bg-blue-500 h-[232px] rounded-[10px] ">
-//                             <div className="grid grid-rows-2 justify-items-center align-middle h-full" >
-//                                 <div className="size-[100%] " >
-//                                     <h1 className="m-[16px] w-[90.2%] h-[40px] font-semibold text-[16px] text-white " >
-//                                         Sport car with the best dessing and acceleration
-//                                     </h1>
-//                                     <p className=" m-[16px]  font-medium text-white text-[12px] w-[90.2%] h-[30px] " >
-//                                         Saety and comfort while driving futuristic and elegant sport cart
-//                                     </p>
-//                                 </div>
-
-//                                 <div className="w-full flex justify-center mb-[20px] ">
-//                                     <img className=" w-[190px] h-[60px] self-end  " src={`.${obj.img}`} alt="Cars Img" />
-//                                 </div>
-//                             </div>
-
-//                         </div>
-
-//                         <div className="grid grid-cols-3 w-full justify-items-center items-center h-[70px] " >
-//                             <div className="size-[50px] rounded-[10px] bg-black ">
-
-//                             </div>
-//                             <div className="size-[50px] rounded-[10px] bg-yellow-200 ">
-//                             </div>
-//                             <div className="size-[50px] rounded-[10px] bg-yellow-100 ">
-//                             </div>
-//                         </div>
