@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className='datil' >
+      <div className='datil bg-[#F6F7F9] ' >
           <Outlet />
       </div>
       <Footer />

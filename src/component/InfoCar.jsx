@@ -3,7 +3,6 @@ import { GoPeople } from "react-icons/go";
 import { TbSteeringWheel } from "react-icons/tb";
 import { FaHeart } from "react-icons/fa";
 import { RentNow } from "./RentNow";
-import { Prices } from "./Prices";
 
 export const cars = [
     { id: 1, name: "All New Rush", fuel: "90L", model: "SUV", engine: "Manual", seat: 6, price: "90.00", beforePrice: "110.00", img: "./img/All-New-Rush.png" },
@@ -39,18 +38,18 @@ export const InfoCar = () => {
                                 <div className="flex flex-col justify-center" >
                                     <table>
                                         <tbody>
-                                        <tr>
-                                            <td className="text-[12px] text-[#90A3BF] font-medium " ><FaGasPump /></td>
-                                            <td className="text-[12px] text-[#90A3BF] font-medium " >{elem.fuel}</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="text-[12px] text-[#90A3BF] font-medium " ><GoPeople /> </td>
-                                            <td className="text-[12px] text-[#90A3BF] font-medium " >{elem.seat}</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="text-[12px] text-[#90A3BF] font-medium " ><TbSteeringWheel /></td>
-                                            <td className="text-[12px] text-[#90A3BF] font-medium " >{elem.engine}</td>
-                                        </tr>
+                                            <tr>
+                                                <td className="text-[12px] text-[#90A3BF] font-medium " ><FaGasPump /></td>
+                                                <td className="text-[12px] text-[#90A3BF] font-medium " >{elem.fuel}</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="text-[12px] text-[#90A3BF] font-medium " ><GoPeople /> </td>
+                                                <td className="text-[12px] text-[#90A3BF] font-medium " >{elem.seat}</td>
+                                            </tr>
+                                            <tr>
+                                                <td className="text-[12px] text-[#90A3BF] font-medium " ><TbSteeringWheel /></td>
+                                                <td className="text-[12px] text-[#90A3BF] font-medium " >{elem.engine}</td>
+                                            </tr>
                                         </tbody>
                                     </table>
 
@@ -59,9 +58,13 @@ export const InfoCar = () => {
                             </div>
                         </div>
                         <div className=" grid grid-cols-2 mt-2 " >
-                            <Prices price={elem.price} beforePrice={elem.beforePrice} />
-                            <div className=" justify-self-end " > 
-                                <RentNow  url={`detail/${elem.id}`}/>
+                            <div >
+                                <h1 className=" text-[16px] font-semibold text-[#1A202C] " >${elem.price}/
+                                    <span className="font-medium text-[12px] text-[#90A3BF] " >day</span></h1>
+                                <h2 className="font-medium text-[12px] text-[#90A3BF] ">${elem.beforePrice}</h2>
+                            </div>
+                            <div className=" justify-self-end " >
+                                <RentNow url={`detail/${elem.id}`} w={"w-[100px]"} h={"h-[36px]"}  />
                             </div>
                         </div>
                     </div>
