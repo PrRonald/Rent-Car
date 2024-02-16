@@ -14,13 +14,19 @@ export const cars = [
 
 
 export const InfoCar = () => {
+
+    const value = true;
+    
+
     return (
 
+        
 
-        <section className=" w-full flex flex-col items-center   ">
+
+        <section className={` w-full grid ${value ? "grid-flow-row justify-center": "grid-flow-col  overflow-scroll " }   `} >
             {
                 cars.map(elem => (
-                    <div className=" w-[91.38%]  " key={elem.id} >
+                    <div className={`${value ? "w-[87.2%]" : "w-[350px]"}`} key={elem.id} >
                         <div className="grid grid-cols-2 gap-4" >
                             <div>
                                 <h1 className="font-semibold text-[16px] text-[#1A202C] " >{elem.name}</h1>
