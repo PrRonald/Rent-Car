@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import { cars } from "../component/InfoCar"
+import { InfoCar, cars } from "../component/InfoCar"
 import { getCarById } from "../App"
 import { RentNow } from "../component/RentNow"
 import { CiStar } from "react-icons/ci";
@@ -11,11 +11,24 @@ export const DetailCars = () => {
     const { carId } = useParams()
     const obj = getCarById(Number(carId), cars)
 
+    async function as () {
+
+       const containerWidth = document.querySelector(".father").clientWidth;
+       return(containerWidth)
+     } 
+
+    //  console.log(as());
+    
+    
+
     return (
         <>
-            <section >
-                <div className="w-full flex flex-col items-center "  >
-                    <div className="w-[86.667%] h-auto grid grid-flow-row gap-y-[32px]  "  >
+            <section className="father">
+                <div className={`w-full grid grid-rows-[auto_auto] grid-cols-[87.2%] justify-center `}  >
+
+                    <div className=" h-auto  w-full grid grid-rows-[repeat(4_auto)]
+                    gap-y-[32px] "  >
+
                         <div className="size-full   grid grid-rows-[232px_64px] gap-y-[24px] "  >
                             <div className="size-[100%] rounded-[10px] bg-blue-400 " ></div>
                             <div className=" size-full *:rounded-[10px] grid  grid-cols-[repeat(3,_92px)] gap-[7.4%] justify-center ">
@@ -81,7 +94,15 @@ export const DetailCars = () => {
                         <div>
                             <Reviews />
                         </div>
+
                     </div>
+
+                    
+                        <div className=" w-auto h-auto" >
+                            <InfoCar AlignXY={false} />
+                        </div>
+                
+
                 </div>
             </section>
         </>

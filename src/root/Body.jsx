@@ -18,7 +18,7 @@ export const Body = () => {
 
                 </div>
                 <div className="w-[90%]">
-                    <InfoCar />
+                    <InfoCar AlignXY={true} />
                 </div>
 
             </div>

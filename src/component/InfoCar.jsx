@@ -13,21 +13,17 @@ export const cars = [
 ];
 
 
-export const InfoCar = () => {
-
-    const value = true;
+export const InfoCar = ({AlignXY}) => {
     
-
     return (
 
-        
-
-
-        <section className={` w-full grid ${value ? "grid-flow-row justify-center": "grid-flow-col  overflow-scroll " }   `} >
+        <section className={` w-full ${AlignXY ? "grid grid-flow-row  justify-center gap-[20px] "
+        : "grid grid-flow-col  overflow-scroll gap-y-4 overflow-y-hidden " }   `} >
             {
                 cars.map(elem => (
-                    <div className={`${value ? "w-[87.2%]" : "w-[350px]"}`} key={elem.id} >
-                        <div className="grid grid-cols-2 gap-4" >
+                    <div className={`${AlignXY ? "w-[91.4%] h-[240px]" 
+                    :  "grid grid-rows-[44px_auto_36px] place-items-center w-[240px] h-[286px]"}`} key={elem.id} >
+                        <div className="grid grid-cols-2 " >
                             <div>
                                 <h1 className="font-semibold text-[16px] text-[#1A202C] " >{elem.name}</h1>
                                 <h2 className=" font-medium text-[12px] text-[#90A3BF] " >{elem.model}</h2>
@@ -36,14 +32,16 @@ export const InfoCar = () => {
                                 <FaHeart className="text-red-500" />
                             </div>
                         </div>
-                        <div className=" grid grid-cols-[auto_auto] mb-6 mt-6" >
+
+                        <div className={` ${ AlignXY ? "grid grid-cols-[auto_auto] ":
+                        "grid grid-rows-[auto_auto] gap-[35px] justify-items-center"} `} >
                             <div >
-                                <img src={elem.img} alt="car" />
+                                <img src={`${AlignXY ? elem.img : "." + elem.img}`} alt="car" />
                             </div>
-                            <div className=" justify-self-center " >
-                                <div className="flex flex-col justify-center" >
-                                    <table>
-                                        <tbody>
+                            <div className="w-[204px] h-[14px]  " >
+                                <div className="flex flex-row justify-center" >
+                                    <table  >
+                                        <tbody className={`${AlignXY ? "" : " grid grid-cols-3 "}`} >
                                             <tr>
                                                 <td className="text-[12px] text-[#90A3BF] font-medium " ><FaGasPump /></td>
                                                 <td className="text-[12px] text-[#90A3BF] font-medium " >{elem.fuel}</td>
@@ -60,10 +58,10 @@ export const InfoCar = () => {
                                     </table>
 
                                 </div>
-
                             </div>
                         </div>
-                        <div className=" grid grid-cols-2 mt-2 " >
+
+                        <div className=" grid grid-cols-2 " >
                             <div >
                                 <h1 className=" text-[16px] font-semibold text-[#1A202C] " >${elem.price}/
                                     <span className="font-medium text-[12px] text-[#90A3BF] " >day</span></h1>
