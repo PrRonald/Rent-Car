@@ -11,16 +11,6 @@ export const DetailCars = () => {
     const { carId } = useParams()
     const obj = getCarById(Number(carId), cars)
 
-    async function as () {
-
-       const containerWidth = document.querySelector(".father").clientWidth;
-       return(containerWidth)
-     } 
-
-    //  console.log(as());
-    
-    
-
     return (
         <>
             <section className="father">
@@ -37,8 +27,6 @@ export const DetailCars = () => {
                                 <div className="w-full h-[64px] bg-blue-400 " ></div>
                             </div>
                         </div>
-
-
 
                         <div className=" grid grid-rows-[46px_72px_48px_56px]
                         gap-y-[16px] bg-white rounded-[10px] p-4 " >
@@ -87,22 +75,17 @@ export const DetailCars = () => {
                                         <span className="font-bold text-[12px] leading-[15.12px] text-[#90A3BF] " >day</span></h1>
                                     <h2 className="font-bold text-[12px] leading-[15.12px] text-[#90A3BF] ">${obj.beforePrice}</h2>
                                 </div>
-                                <RentNow url={"/paymentCarRent"} w={"w-[140px]"} h={"h-[56px]"} />
+                                <RentNow url={`/paymentCarRent/${obj.id}`} w={"w-[140px]"} h={"h-[56px]"} />
                             </div>
                         </div>
-
                         <div>
                             <Reviews />
                         </div>
-
                     </div>
 
-                    
-                        <div className=" w-auto h-auto" >
-                            <InfoCar AlignXY={false} />
-                        </div>
-                
-
+                    <div className=" w-auto " >
+                        <InfoCar AlignXY={false} url={"/detail"} />
+                    </div>
                 </div>
             </section>
         </>

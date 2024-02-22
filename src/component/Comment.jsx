@@ -4,17 +4,17 @@ import { FaRegUserCircle } from "react-icons/fa";
 
 const comments = [
     {id: 1, name: "Luis Nunez", comment: "The best car", date: "12 July 2023", carrer: "Full stack Developer"},
-    {id: 1, name: "Ronald Valdez", comment: "The best car", date: "12 Agost 2022", carrer: "Doctor"},
-    {id: 1, name: "Chelsea de Nunez", comment: "The best car", date: "12 July 2022", carrer: "Full stack Developer"},
-    {id: 1, name: "Horeb Nunez", comment: "I find the correct car in a short time", date: "12 July 2022", carrer: "Full stack Developer"},
-    {id: 1, name: "Grace Nunez", comment: "The best car", date: "18 Februry 2021", carrer: "Full stack Developer"},
+    {id: 2, name: "Ronald Valdez", comment: "The best car", date: "12 Agost 2022", carrer: "Doctor"},
+    {id: 3, name: "Chelsea de Nunez", comment: "The best car", date: "12 July 2022", carrer: "Full stack Developer"},
+    {id: 4, name: "Horeb Nunez", comment: "I find the correct car in a short time", date: "12 July 2022", carrer: "Full stack Developer"},
+    {id: 5, name: "Grace Nunez", comment: "The best car", date: "18 Februry 2021", carrer: "Full stack Developer"},
 ]
 export const Comment = () => {
     return (
 
         <section>
             {comments.map(elem => (
-            <section className="size-full grid grid-cols-[50px_auto] " >
+            <section className="size-full grid grid-cols-[50px_auto]  " key={elem.id} >
 
             <div className=" size-[44px] rounded-fulljustify-self-center ">
             <FaRegUserCircle className="size-full text-sm" />

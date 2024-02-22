@@ -25,14 +25,13 @@ const router = createBrowserRouter([
         path: "detail/:carId",
         element: <DetailCars />,
 
-      },
-      {
-        path: "paymentCarRent",
-        element: <PaymentCarRent />,
-
-      }
+      }     
     ]
   },
+  {
+    path: "/paymentCarRent/:carId",
+    element: <PaymentCarRent />,
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
