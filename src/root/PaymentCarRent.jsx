@@ -9,6 +9,8 @@ import { BillDatail } from "../component/BillDatail";
 import { InputText } from "../component/InputText";
 import { ContentInf } from "../component/ContentInf";
 import { PymentMethod } from "../component/PymentMethod";
+import { Confirmation } from "../component/Confirmation";
+import { RentNow } from "../component/RentNow";
 
 
 export const PaymentCarRent = () => {
@@ -102,6 +104,22 @@ export const PaymentCarRent = () => {
                             </div>
                         </ContentInf>
                     </div>
+                    <div className="size-full" >
+                        <ContentInf
+                            title={"Confirmation"}
+                            description={"We are getting to the end just few clicks and your rental is ready"}
+                            steps={"Step 4 of 4"}
+                        >
+                            <div className="flex flex-col justify-center  w-[90.2%]" >
+                                <Confirmation text={" I agree with sending an Marketing and newsletter emails. No spam, promissed!"} />
+                                <Confirmation text={" I agree with our terms and conditions and privacy policy!"} />
+                            </div>
+                            <div className="size-full" >
+                                <RentNow url={"/"} w={"w-[100px]"} h={"h-[36px]"} />
+                            </div>
+
+                        </ContentInf>
+                    </div>
                 </div>
             </div>
             {/* Footer */}
@@ -109,6 +127,5 @@ export const PaymentCarRent = () => {
                 <Footer />
             </div>
         </section>
-
     );
 }

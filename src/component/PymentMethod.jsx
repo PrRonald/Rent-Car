@@ -18,7 +18,7 @@ export const PymentMethod = () => {
         { value: '3', label: 'Bitcoin', component: <Tag3 />, img: "../svg/Bitcoin.svg" },
     ];
 
-    const [selectedValue, setSelectedValue] = useState(<Tag1 />);
+    const [selectedValue, setSelectedValue] = useState(options[0].value);
 
     const handleChange = (event) => {
         setSelectedValue(event.target.value);
