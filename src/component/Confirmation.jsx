@@ -9,8 +9,7 @@ export const Confirmation = ({ text }) => {
                     id="markingCheck" />
                 <label
                     className="font-medium font-sans text-[12px] leading-[19.2px] text-[#1F2544]"
-                    htmlFor="markingCheck"
-                >
+                    htmlFor="markingCheck">
                     {text}
                 </label>
             </div>
