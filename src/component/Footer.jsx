@@ -1,7 +1,14 @@
+import { Link } from "react-router-dom";
 import { MorentName } from "./MorentName";
 
 
 export const Footer = () => {
+
+    const infs = [
+        { id: 1, title: "About", subTitle: ["How it works", "Featured", "Partnership", "Bussiness Relation"] },
+        { id: 2, title: "Social", subTitle: ["Discord", "Instagram", "Twitter", "Facebook"] },
+        { id: 3, title: "Community", subTitle: ["Events", "Blog", "Podcast", "Invite a friend"] }]
+
     return (
         <section className="w-full flex flex-row justify-center " >
             <div className=" w-[87.2%] grid grid-rows-[100px_140px_140px_140px] gap-2 ">
@@ -12,39 +19,32 @@ export const Footer = () => {
                         and help increase ypur sales business
                     </p>
                 </div>
-                <div className="grid grid-cols-2" >
+                <div className="flex flex-row justify-between " >
+                    {infs.map((inf) => (
+                        <div
+                          className="w-[142px] h-[192px] "
+                          key={inf.id}>
+                            <h1>{inf.title}</h1>
+                            {inf.subTitle.map((subTitle, ind) => (
+                                <Link
+                                    key={ind}
+                                    to="/"
+                                    className="text-[#90A3BF] flex flex-col  " >
+                                    {subTitle}
+                                </Link>
+                            ))}
+                        </div>
+                    ))}
                     <div>
-                        <h2 className="font-semibold text-sm text-[#1A202C] " >About</h2>
-                        <h1 className="text-[#90A3BF] font-sans " >How it works</h1>
-                        <h1 className="text-[#90A3BF] font-sans " >Featured</h1>
-                        <h1 className="text-[#90A3BF] font-sans " >Partnership</h1>
-                        <h1 className="text-[#90A3BF] font-sans " >Bussiness Relation</h1>
-                    </div>
-                    <div>
-                        <h2 className="font-semibold text-sm text-[#1A202C] ">Social</h2>
-                        <h1 className="text-[#90A3BF] font-sans " >Discord</h1>
-                        <h1 className="text-[#90A3BF] font-sans " >Instagram</h1>
-                        <h1 className="text-[#90A3BF] font-sans " >Twitter</h1>
-                        <h1 className="text-[#90A3BF] font-sans " >Facebook</h1>
-                    </div>
-                </div>
+                        <div className="grid grid-cols-2 py-3"  >
+                            <h4 className="text-[12px] " >Privacy & Policy</h4>
+                            <h4 className="text-[12px] " >Terms & Condition</h4>
+                        </div>
 
-                <div>
-                    <h2 className="font-semibold text-sm text-[#1A202C] " >Community</h2>
-                    <h1 className="text-[#90A3BF] font-sans "  >Events</h1>
-                    <h1 className="text-[#90A3BF] font-sans "  >Blog</h1>
-                    <h1 className="text-[#90A3BF] font-sans "  >Podcast</h1>
-                    <h1 className="text-[#90A3BF] font-sans "  >Invite a friend</h1>
-                </div>
-                <div>
-                    <div className="grid grid-cols-2 py-3"  >
-                        <h4 className="text-[12px] " >Privacy & Policy</h4>
-                        <h4 className="text-[12px] " >Terms & Condition</h4>
+                        <h4 className="text-[12px]  " >2022 MORENT. All rights reserved</h4>
                     </div>
-
-                    <h4 className="text-[12px]  " >2022 MORENT. All rights reserved</h4>
                 </div>
-            </div>
+                </div>
         </section>
     );
 }

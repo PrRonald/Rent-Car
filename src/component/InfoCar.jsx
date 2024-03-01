@@ -17,7 +17,7 @@ export const InfoCar = ({AlignXY, url}) => {
     
     return (
 
-        <section className={` w-full ${AlignXY ? "flex flex-col items-center "
+        <section className={` w-full ${AlignXY ? "flex flex-col items-center gap-5 "
         : "grid grid-flow-col  overflow-scroll gap-y-4 overflow-y-hidden " }   `} >
             {
                 cars.map(elem => (
@@ -25,34 +25,34 @@ export const InfoCar = ({AlignXY, url}) => {
                     :  "grid grid-rows-[44px_auto_60px] justify-center w-[240px] h-[286px]"}`} key={elem.id} >
                         <div className="grid grid-cols-[80%_20%] gap-4 " >
                             <div>
-                                <h1 className="font-semibold text-[16px] text-[#1A202C] " >{elem.name}</h1>
-                                <h2 className=" font-medium text-[12px] text-[#90A3BF] " >{elem.model}</h2>
+                                <h1 className="text-16 font-semibold text-secondary-500 " >{elem.name}</h1>
+                                <h2 className=" text-12 font-medium text-secondary-300 " >{elem.model}</h2>
                             </div>
                             <div className="justify-self-end">
                                 <FaHeart className="text-red-500" />
                             </div>
                         </div>
 
-                        <div className={` ${ AlignXY ? "grid grid-cols-[auto_auto] mb-6 mt-6":
+                        <div className={` ${ AlignXY ? "grid grid-cols-[50%_50%] ] mb-6 mt-6":
                         "grid grid-rows-[auto_auto] gap-[20px] justify-items-center items-center"} `} >
                             <div >
                                 <img src={`${AlignXY ? elem.img : "." + elem.img}`} alt="car" />
                             </div>
-                            <div className={`${AlignXY ? "justify-self-center" : "w-[204px] h-[14px] " }`}      >
+                            <div className={`${AlignXY ? "justify-self-end" : "w-[204px] h-[14px] " }`}      >
                                 <div className="flex flex-row justify-center" >
                                     <table  >
                                         <tbody className={`${AlignXY ? "" : " grid grid-cols-3 "}`} >
                                             <tr>
-                                                <td className="text-[12px] text-[#90A3BF] font-medium " ><FaGasPump /></td>
-                                                <td className="text-[12px] text-[#90A3BF] font-medium " >{elem.fuel}</td>
+                                                <td className="text-12 font-medium text-secondary-300" ><FaGasPump /></td>
+                                                <td className="text-12 font-medium text-secondary-300" >{elem.fuel}</td>
                                             </tr>
                                             <tr>
-                                                <td className="text-[12px] text-[#90A3BF] font-medium " ><GoPeople /> </td>
-                                                <td className="text-[12px] text-[#90A3BF] font-medium " >{elem.seat}</td>
+                                                <td className="text-12 font-medium text-secondary-300" ><GoPeople /> </td>
+                                                <td className="text-12 font-medium text-secondary-300" >{elem.seat}</td>
                                             </tr>
                                             <tr>
-                                                <td className="text-[12px] text-[#90A3BF] font-medium " ><TbSteeringWheel /></td>
-                                                <td className="text-[12px] text-[#90A3BF] font-medium " >{elem.engine}</td>
+                                                <td className="text-12 font-medium text-secondary-300" ><TbSteeringWheel /></td>
+                                                <td className="text-12 font-medium text-secondary-300" >{elem.engine}</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -61,14 +61,14 @@ export const InfoCar = ({AlignXY, url}) => {
                             </div>
                         </div>
 
-                        <div className=" grid grid-cols-2 mt-2 " >
+                        <div className=" grid grid-cols-[50%_50%] mt-2 " >
                             <div >
-                                <h1 className=" text-[16px] font-semibold text-[#1A202C] " >${elem.price}/
-                                    <span className="font-medium text-[12px] text-[#90A3BF] " >day</span></h1>
-                                <h2 className="font-medium text-[12px] text-[#90A3BF] ">${elem.beforePrice}</h2>
+                                <h1 className=" text-16 font-semibold text-secondary-500 " >${elem.price}/
+                                    <span className="text-12 font-medium  text-secondary-300 " >day</span></h1>
+                                <h2 className="font-medium text-12 text-secondary-300  ">${elem.beforePrice}</h2>
                             </div>
                             <div className=" justify-self-end " >
-                                <RentNow url={`${url}/${elem.id}`} w={"w-[100px]"} h={"h-[36px]"}  />
+                                <RentNow url={`${url}/${elem.id}`} w={"w-[100px]"} h={"h-[30px]"}  />
                             </div>
                         </div>
                     </div>

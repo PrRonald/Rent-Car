@@ -17,7 +17,7 @@ export const Header = () => {
                         className="self-center justify-self-end size-[28px]" />
                 </div>
                 <div 
-                    className="w-full h-[74px] flex flex-row items-center">
+                    className="w-full ground h-[74px] flex flex-row items-center">
                     <MorentName />
                 </div>
                 <div 
