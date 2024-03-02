@@ -12,11 +12,8 @@ export const cars = [
     { id: 5, name: "New MGZS", model: "SUV", fuel: "90L", engine: "Auto", seat: 4, price: "100.00", beforePrice: "0", img: "./img/New-MGZS.png" },
 ];
 
-
 export const InfoCar = ({AlignXY, url}) => {
-    
     return (
-
         <section className={` w-full ${AlignXY ? "flex flex-col items-center gap-5 "
         : "grid grid-flow-col  overflow-scroll gap-y-4 overflow-y-hidden " }   `} >
             {
@@ -32,7 +29,6 @@ export const InfoCar = ({AlignXY, url}) => {
                                 <FaHeart className="text-red-500" />
                             </div>
                         </div>
-
                         <div className={` ${ AlignXY ? "grid grid-cols-[50%_50%] ] mb-6 mt-6":
                         "grid grid-rows-[auto_auto] gap-[20px] justify-items-center items-center"} `} >
                             <div >
@@ -60,7 +56,6 @@ export const InfoCar = ({AlignXY, url}) => {
                                 </div>
                             </div>
                         </div>
-
                         <div className=" grid grid-cols-[50%_50%] mt-2 " >
                             <div >
                                 <h1 className=" text-16 font-semibold text-secondary-500 " >${elem.price}/

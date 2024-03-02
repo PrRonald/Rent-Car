@@ -4,25 +4,17 @@ import { PickDropInfo } from "../component/PickDropInfo";
 export const Body = () => {
     return (
         <section >
-            <div className="w-full flex flex-col items-center" >
-
-                <div className=" w-[90%] h-[auto]  " >
-
-                    <div>
-                        <PickDropInfo title={"Pick-Up"} />
-                    </div>
-
-                    <div>
-                        <PickDropInfo title={"Drop-Off"} />
-                    </div>
-
+            <div className=" h-[auto]  " >
+                <div>
+                    <PickDropInfo title={"Pick-Up"} />
                 </div>
-                <div className="w-[90%]">
-                    <InfoCar AlignXY={true} url={"detail"} />
+                <div>
+                    <PickDropInfo title={"Drop-Off"} />
                 </div>
-
             </div>
-
+            <div className="">
+                <InfoCar AlignXY={true} url={"detail"} />
+            </div>
         </section>
     );
 }

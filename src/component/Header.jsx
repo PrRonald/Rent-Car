@@ -5,10 +5,7 @@ import { MorentName } from "./MorentName";
 
 export const Header = () => {
     return (
-        <section 
-            className="flex flex-row justify-center w-full h-[222px] " >
-            <div 
-                className=" w-[86.667%] h-[74px]" >
+        <section className="w-full h-[222px] " >
                 <div 
                     className=" grid grid-cols-2 w-full h-[74px] align-middle ">
                     <IoIosMenu 
@@ -47,7 +44,6 @@ export const Header = () => {
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
     );
 }
