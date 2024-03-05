@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { InputText } from './InputText';
 
-
 const Visa = [
     { labelfor: "carname", label: "Car Name", inputText: "Car Name", type: "text" },
     { labelfor: "carholder", label: "Car Holder", inputText: "Car Holder", type: "text" },
     { labelfor: "expirationdate", label: "Expiration Date", inputText: "DD/MMYY", type: "text" },
     { labelfor: "cvc", label: "CVC", inputText: "CVC", type: "text" },
 ]
-
 
 export const PymentMethod = () => {
 
@@ -37,17 +35,16 @@ export const PymentMethod = () => {
                             <input
                                 type="radio"
                                 id={option.value}
-                                name="conditional-input" // Use a specific name for grouping
+                                name="conditional-input" 
                                 value={option.value}
                                 checked={selectedValue === option.value}
                                 onChange={handleChange}
-                                aria-label={option.label} // Provide ARIA label for screen readers
                                 className='border-[#90A3BF] '
                             />
                             <label
                                 htmlFor={option.value}
                                 className="font-semibold font-snas text-[14px] leading-[21px]
-                        text-[#1A202C] pl-[8px]" >
+                                text-[#1A202C] pl-[8px]" >
                                 {option.label}
                             </label>
 

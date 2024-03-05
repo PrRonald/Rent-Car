@@ -4,7 +4,7 @@ export const PickDropInfo = ({ title}) => {
             <div className="w-full ">
 
                 <div className="p-2" >
-                    <h1 className="text-[16px] font-semibold text-[#1A202C]  " >
+                    <h1 className="text-16 font-semibold text-secondary-500 " >
                         {title}
                     </h1>
                 </div>
@@ -12,13 +12,13 @@ export const PickDropInfo = ({ title}) => {
                 <div className="grid grid-cols-3 gap-3" >
                     <div className="p-2" >
                         <label
-                            className="font-bold text-[16px] text-[#1A202C] "
+                            className="text-16 font-bold text-secondary-500 "
                             htmlFor="location"
                         >
                             Locations
                         </label>
                         <input
-                            className=" w-full  "
+                            className=" w-full outline-none  "
                             type="text"
                             name="dates"
                             id="location"
@@ -26,13 +26,13 @@ export const PickDropInfo = ({ title}) => {
                     </div>
                     <div className="p-2" >
                         <label
-                            className="font-bold text-[16px] text-[#1A202C] "
+                            className="text-16 font-bold text-secondary-500"
                             htmlFor="date"
                         >
                             Date
                         </label>
                         <input
-                            className=" w-full "
+                            className=" w-full text-12 font-regular text-secondary-300 outline-none "
                             type="date"
                             name="dates"
                             id="date"
@@ -40,13 +40,13 @@ export const PickDropInfo = ({ title}) => {
                     </div>
                     <div className="p-2">
                         <label
-                            className="font-bold text-[16px] text-[#1A202C] "
+                            className=" w-full text-16 font-bold text-secondary-500"
                             htmlFor="time"
                         >
                             Time
                         </label>
                         <input 
-                            className=" w-full  "
+                            className=" w-full  text-12 font-regular text-secondary-300 outline-none "
                             type="time"
                             name="dates"
                             id="time" />

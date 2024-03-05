@@ -5,17 +5,17 @@ export const ContentInf = ({children, title, description, steps}) => {
             <div className="grid grid-cols-[80%_20%] grid-rows-[100%] justify-start " >
                 <div>
                     <h1
-                        className="font-bold font-sans text-[16px] leading-[24px] text-[#1A202C]" >
+                        className="text-16 font-bold text-secondary-500" >
                         {title}
                     </h1>
                     <h2
-                        className="font-medium font-sans text-[12px] leading-[15.12px] text-[#90A3BF]" >
+                        className="text-12 font-medium text-secondary-300" >
                         {description}
                     </h2>
                 </div>
                 <div >
                     <h2 
-                        className="font-medium font-sans text-[12px] leading-[15.12px] text-[#90A3BF]" >
+                        className="text-12 font-medium text-secondary-300" >
                         {steps}
                     </h2>
                 </div>

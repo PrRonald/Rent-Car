@@ -6,44 +6,55 @@ import { MorentName } from "./MorentName";
 export const Header = () => {
     return (
         <section className="w-full h-[222px] " >
-                <div 
-                    className=" grid grid-cols-2 w-full h-[74px] align-middle ">
-                    <IoIosMenu 
-                        className="self-center size-[24px]" />
-                    <FaRegUserCircle 
-                        className="self-center justify-self-end size-[28px]" />
-                </div>
-                <div 
-                    className="w-full ground h-[74px] flex flex-row items-center">
-                    <MorentName />
-                </div>
-                <div 
-                    className=" w-full h-[74px] flex flex-row items-center ">
-                    <div 
-                        className=" grid grid-cols-[80.923%_auto] gap-[3%] w-full" >
-                        <div 
-                            className="rounded-[10px] border-[1px] border-[#C3D4E9] w-full h-[48px] flex flex-row
+            <div className=" grid grid-cols-2 w-full h-[74px] align-middle ">
+                <IoIosMenu className="self-center size-[24px]" />
+                <FaRegUserCircle className="self-center justify-self-end size-[28px]" />
+            </div>
+
+            <div
+                className="w-full h-[74px] flex flex-row items-center">
+                <MorentName />
+            </div>
+
+            <div
+                className=" w-full h-[74px] flex flex-row items-center ">
+                <div
+                    className=" grid grid-cols-[80.923%_auto] gap-[3%] w-full" >
+                    <div
+                        className="rounded-[10px] border-[1px] border-[#C3D4E9] w-full h-[48px] flex flex-row
                             justify-normal items-center">
-                            <div 
-                                className="size-[48px] ml-[20px] flex flex-row items-center">
-                                <PiMagnifyingGlassThin 
-                                    className=" text-3xl size-[24px] text-[#C3D4E9]  " />
-                            </div>
-                            <input 
-                                className=" w-full rounded-[10px] border-[1px] outline-none border-none" 
-                                name="search"
-                                placeholder="Search something"/>
+                        <div
+                            className="size-[48px] ml-[20px] flex flex-row items-center">
+                            <PiMagnifyingGlassThin
+                                className=" text-3xl size-[24px] text-[#C3D4E9]  " />
                         </div>
-                        <div 
-                            className="rounded-[10px] border-[1px] border-[#C3D4E9] border-s w-auto
+                        <input
+                            className=" w-full rounded-[10px] border-[1px] outline-none border-none"
+                            name="search"
+                            placeholder="Search something" />
+                    </div>
+                    <div
+                        className="rounded-[10px] border-[1px] border-[#C3D4E9] border-s w-auto
                             flex justify-center items-center ">
-                            <img 
-                                className="size-[24px]"
-                                src="../svg/Filter.svg"
-                                alt="filter" />
-                        </div>
+                        <img
+                            className="size-[24px]"
+                            src="../svg/Filter.svg"
+                            alt="filter" />
                     </div>
                 </div>
+            </div>
+
         </section>
     );
+}
+
+export const HeaderPayment = () => {
+    return (
+        <div className=" grid grid-cols-2 w-full h-[74px] align-middle">
+            <div className="self-center size-[24px]"  >
+                <MorentName />
+            </div>
+            <FaRegUserCircle className="self-center justify-self-end size-[28px]" />
+        </div>
+    )
 }

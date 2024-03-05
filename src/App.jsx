@@ -1,13 +1,17 @@
 import './App.css';
 import { Footer } from './component/Footer';
-import { Header } from "./component/Header";
-import { Outlet } from "react-router-dom"
+import { Header, HeaderPayment } from "./component/Header";
+import { Outlet, useLocation } from "react-router-dom"
 
 function App() {
+
+  const location = useLocation();
+  const reg = /paymentCarRent./i;
+  
   return (
     <section className='w-full flex flex-col place-items-center gap-4'>
       <div className="w-[86.667%]  ">
-        <Header />
+        {reg.test(location.pathname) ? <HeaderPayment /> : <Header />}
         <div className='datil bg-[#F6F7F9] ' >
           <Outlet />
         </div>

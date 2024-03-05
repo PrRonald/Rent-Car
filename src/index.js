@@ -25,12 +25,12 @@ const router = createBrowserRouter([
         path: "detail/:carId",
         element: <DetailCars />,
 
-      }     
+      },
+      {
+        path: "/paymentCarRent/:carId",
+        element: <PaymentCarRent />,
+      }    
     ]
-  },
-  {
-    path: "/paymentCarRent/:carId",
-    element: <PaymentCarRent />,
   }
 ]);
 
