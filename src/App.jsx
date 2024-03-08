@@ -1,24 +1,30 @@
 import './Styles/App.css';
-import { Menu } from './routes/Menu';
-import { Outlet, redirect } from "react-router-dom";
+import { Footer } from './component/Footer';
+import { Header, HeaderPayment } from "./component/Header";
+import { Outlet, useLocation } from "react-router-dom"
 
+function App() {
 
-// console.log(redirect("/Home"))
-
-if (1 === 1) redirect("/Home");
-export function App() {
+  const location = useLocation();
+  const reg = /paymentCarRent./i;
+  
   return (
-
-    <>
-      {/* a header with the logo */}
-      <Menu />
-
-      {/* footer with information */}
-      <div id='detail'>
-        <Outlet />
+    <section className='w-full flex flex-col place-items-center '>
+      <div className="w-[86.667%] lg:w-[97.9%] grid grid-flow-row gap-4 ">
+        {reg.test(location.pathname) ? <HeaderPayment /> : <Header />}
+        <div className='datil ' >
+          <Outlet />
+        </div>
+        <Footer />
       </div>
-    </>
+    </section>
   )
 }
 
+export const getCarById = (id, arr) => {
+  return (
+    arr.find((elem) => elem.id === id)
+  )
+};
 
+export default App;

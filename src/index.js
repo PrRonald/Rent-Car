@@ -1,29 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {App} from './App';
+import App from './App';
 import './Styles/index.css';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import { ViewCars } from './routes/ViewCars';
-import { Home } from './routes/Home';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Body } from './root/Body';
+import { DetailCars } from './root/DatailCars';
+import { ErrorPage } from './error-page';
+import { PaymentCarRent } from './root/PaymentCarRent';
+
 
 const router = createBrowserRouter([
   {
+    path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
-        path: "car/:carId",
-        element: <ViewCars/>,
+        path: "/",
+        element: <Body />
       },
       {
-        path: "/",
-        element: <Home />,
-      }
+        path: "detail/:carId",
+        element: <DetailCars />,
+
+      },
+      {
+        path: "/paymentCarRent/:carId",
+        element: <PaymentCarRent />,
+      }    
     ]
-  },
-  
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

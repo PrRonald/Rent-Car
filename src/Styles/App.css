@@ -1,3 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+    .text-12{
+        @apply font-plus text-[12px] leading-[15.12px]
+    }
+
+    .text-14{
+        @apply font-plus text-[14px] leading-[21px]
+    }
+
+    .text-16{
+        @apply font-plus text-[16px] leading-[24px]
+    }
+
+    .text-18{
+        @apply font-plus text-[18px] leading-[27px]
+    }
+
+    .text-20{
+        @apply font-plus text-[20px] leading-[30px]
+    }
+
+    .text-24{
+        @apply font-plus text-[24px] leading-[36px]
+    }
+
+    .text-32{
+        @apply font-plus text-[32px] leading-[48px]
+    }
+
+    .text-36{
+        @apply font-plus text-[36px] leading-[54px]
+    }
+
+    .text-40{
+        @apply font-plus text-[40px] leading-[60px]
+    }
+
+    .text-72{
+        @apply font-plus text-[72px] leading-[108px]
+    }
