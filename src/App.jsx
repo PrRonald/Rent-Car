@@ -9,10 +9,10 @@ function App() {
   const reg = /paymentCarRent./i;
   
   return (
-    <section className='w-full flex flex-col place-items-center gap-4'>
-      <div className="w-[86.667%]  ">
+    <section className='w-full flex flex-col place-items-center '>
+      <div className="w-[86.667%] lg:w-[97.9%] grid grid-flow-row gap-4 ">
         {reg.test(location.pathname) ? <HeaderPayment /> : <Header />}
-        <div className='datil bg-[#F6F7F9] ' >
+        <div className='datil ' >
           <Outlet />
         </div>
         <Footer />

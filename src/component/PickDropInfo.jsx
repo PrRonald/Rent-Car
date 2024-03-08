@@ -1,6 +1,6 @@
 export const PickDropInfo = ({ title}) => {
     return (
-        <section className="w-full h-[127px] ">
+        <section className="w-full h-[127px] bg-white ">
             <div className="w-full ">
 
                 <div className="p-2" >

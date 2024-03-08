@@ -76,7 +76,7 @@ export const DetailCars = () => {
                         <Reviews />
                     </div>
                 </div>
-                <div className=" w-auto " >
+                <div className="w-[300px]" >
                     <InfoCar AlignXY={false} url={"/detail"} />
                 </div>
             </section>
