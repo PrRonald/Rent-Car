@@ -1,6 +1,6 @@
 # This Project is in construction
 
-Working on the mobile view 
+Working on the mobile view. 
 The desktop view is the next part
 
 When the design is finished, the next step is functionalities.
