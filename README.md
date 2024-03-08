@@ -1,3 +1,11 @@
+# This Project is in construction
+
+Working on the mobile view 
+The desktop view is the next part
+
+When the design is finished, the next step is functionalities.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

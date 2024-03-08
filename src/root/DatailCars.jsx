@@ -12,7 +12,7 @@ export const DetailCars = () => {
 
     return (
         <>
-            <section className={`w-full grid grid-rows-[auto_auto] grid-cols-[100%] justify-center `}  >
+            <section className={`w-full grid grid-rows-[auto_auto] grid-cols-1 justify-center `}  >
                 <div className=" h-auto  w-full grid grid-rows-[repeat(4_auto)]
                     gap-y-[32px] "  >
                     <div className="size-full   grid grid-rows-[232px_64px] gap-y-[24px] "  >
@@ -76,7 +76,7 @@ export const DetailCars = () => {
                         <Reviews />
                     </div>
                 </div>
-                <div className="w-[300px]" >
+                <div className="w-auto" >
                     <InfoCar AlignXY={false} url={"/detail"} />
                 </div>
             </section>
